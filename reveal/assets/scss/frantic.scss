@@ -1,0 +1,67 @@
+/*
+
+    @@@@@@@@@ B@@@@@@Mi        3@@@  @@@:    :@@@ @@@@@@@@@..@@@;    ;H@@@@Hr
+    @@@@#@@@9 A@@@@@@@@@,     9@@@@  @@@@:   ,@@@ 9@@@@@@@@  @@@,  r@@@@@@@@@@S
+    @@@X      #@@9   9@@@   ;@@@@@@  @@@@@M  ,@@@    @@@&   ;@@@, @@@@r    i@5.
+    @@@@@@@h  #@@A   A@@@  B@@@r@@@  @@@i@@@  @@@    @@@H   r@@@ ,@@@,
+    @@@@H#@S  #@@Gr@@@@.  @@@@  @@@  @@@  @@@&@@@    @@@#   r@@@. @@@r
+    @@@A      #@@& S@@@ r@@@i   @@@  @@@   G@@@@@    @@@M   r@@@, 3@@@A:  ,#@@;
+    @@@B      #@@G   @@@@@B     @@@  @@@     @@@@    @@@M   ;@@@:   2@@@@@@@@#,
+
+	Frantic theme for reveal.js.
+	Copyright (C) 2013 Frantic.com
+
+*/
+
+// Default mixins and settings -----------------
+
+	@import "templates/mixins";
+	@import "templates/settings";
+
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+
+	@import url(http://fonts.googleapis.com/css?family=Montserrat:700);
+	@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic);
+
+
+// Override theme settings (see ../template/settings.scss)
+
+	$backgroundColor: #111;
+	$mainFont: 'Open Sans', Times, 'Times New Roman', serif;
+	$linkColor: #e7ad52;
+	$linkColorHover: lighten( $linkColor, 20% );
+	$headingFont: 'Montserrat', Impact, sans-serif;
+	$headingTextShadow: none;
+	$headingLetterSpacing: -0.03em;
+	$headingTextTransform: none;
+	$selectionBackgroundColor: #e7ad52;
+	$mainFontSize: 30px;
+
+	$blackBackground: #000;
+	$blackForeground: #FFF;
+	$whiteBackground: #FFF;
+	$whiteForeground: #000;
+	$cyanBackground: #12c1df;
+	$cyanForeground: #FFF;
+	$orangeBackground: #fba940;
+	$orangeForeground: #FFF;
+	$redBackground: #e70033;
+	$redForeground: #FFF;
+	$greenBackground: #97d937;
+	$greenForeground: #FFF;
+	$grayBackground: #d0cbc4;
+	$grayForeground: #FFF;
+	$lightGrayBackground: #e6e6e6;
+	$lightGrayForeground: #000;
+	$darkGrayBackground: #323232;
+	$darkGrayForeground: #FFF;
+
+
+// Theme template ------------------------------
+
+	@import "templates/theme";
+
+// ---------------------------------------------
