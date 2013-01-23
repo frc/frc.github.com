@@ -29,7 +29,10 @@
 
 	.dim { opacity: 0; transition: all .5s ease-in-out; }
 
-	.label { line-height: 1.65em; padding: 0 0.5em; }
+	.label {
+		font-family: Monaco, Bitstream Vera Sans Mono, "Lucida Console", Terminal;
+		border-radius: 5px; line-height: 1.65em; padding: 0 0.5em; text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+	}
 
 /*********************************************
  * HEADERS
@@ -197,7 +200,10 @@
 	#slide-number { top: 15px; right: 15px; }
 
 	/*    Slides   */
-	.slides .label { display: inline-block; padding: 2px; }
+	.slides .label {
+		background: #333; color: #ddd; white-space: nowrap;
+		display: inline-block; font-size: 1rem; line-height: 1.2; padding: 5px 7px;
+	}
 	.slides .image {
 		box-shadow: 0 0 35px rgba(255,255,255,0.3);
 		display: inline-block; padding: 5px;
@@ -220,8 +226,6 @@
 
 	.slides .code-block pre,
 	.slides .code-block .label { float: left; }
-
-	.slides .label { background: #333; color: #ddd; }
 
 	.toggle-slide { display: none; }
 
