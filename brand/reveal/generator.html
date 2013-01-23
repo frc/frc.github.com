@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+		<meta charset="utf-8">
+
+		<title>Reveal Settings Generator</title>
+
+		<meta name="description" content="Generator that spits out settings for reveal.js using a switch-board type interface." />
+		<meta name="author" content="Niko Pettersen" />
+
+		<link rel="dns-prefetch" href="http://code.jquery.com" />
+		<link rel="dns-prefetch" href="http://frc.github.com" />
+		<link rel="dns-prefetch" href="http://fonts.google.com" />
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<!-- Presentation styles -->
+		<link rel="stylesheet" href="http://frc.github.com/brand/reveal/css/reveal.css" />
+		<link rel="stylesheet" href="http://frc.github.com/brand/reveal/css/frantic.css" />
+
+		<script src="https://raw.github.com/LeaVerou/prefixfree/gh-pages/prefixfree.min.js"></script>
+
+		<!--[if lt IE 9]>
+			<script src="http://frc.github.com/reveal/assets/js/polyfills/html5shiv.js"></script>
+		<![endif]-->
+
+		<style type="text/css">
+			/*
+				Reveal Generator
+				Sliding radio buttons: http://codepen.io/oggyindahouse/pen/Bamui (by Oguzhan Canseve)
+			*/
+
+			body { font-family: 'Open Sans', sans-serif; }
+
+			a { color: orange; transition: all .4s ease-in-out; }
+			a:hover { color: #FFF; }
+
+			.switch {
+				position: relative;
+				height: 26px;
+				width: 120px;
+				margin: 20px auto;
+				background: rgba(0, 0, 0, 0.25);
+				border-radius: 3px;
+				-webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+				box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+			}
+			.switch-label {
+				position: relative;
+				z-index: 2;
+				float: left;
+				width: 58px;
+				line-height: 26px;
+				font-size: 11px;
+				color: rgba(255, 255, 255, 0.35);
+				text-align: center;
+				text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
+				cursor: pointer;
+			}
+			.switch-label:active {
+				font-weight: bold;
+			}
+
+			.switch-label-off {
+				padding-left: 2px;
+			}
+
+			.switch-label-on {
+				padding-right: 2px;
+			}
+
+			.switch-input {
+				display: none;
+			}
+			.switch-input:checked + .switch-label {
+				font-weight: bold;
+				color: rgba(0, 0, 0, 0.65);
+				text-shadow: 0 1px rgba(255, 255, 255, 0.25);
+				-webkit-transition: 0.15s ease-out;
+				-moz-transition: 0.15s ease-out;
+				-ms-transition: 0.15s ease-out;
+				-o-transition: 0.15s ease-out;
+				transition: 0.15s ease-out;
+				-webkit-transition-property: color, text-shadow;
+				-moz-transition-property: color, text-shadow;
+				-ms-transition-property: color, text-shadow;
+				-o-transition-property: color, text-shadow;
+				transition-property: color, text-shadow;
+			}
+			.switch-input:checked + .switch-label-on ~ .switch-selection {
+				left: 60px;
+				/* Note: left: 50%; doesn't transition in WebKit */
+			}
+
+			.switch-selection {
+				position: absolute;
+				z-index: 1;
+				top: 2px;
+				left: 2px;
+				display: block;
+				width: 58px;
+				height: 22px;
+				border-radius: 3px;
+				background-color: #65bd63;
+				background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9dd993), color-stop(100%, #65bd63));
+				background-image: -webkit-linear-gradient(top, #9dd993, #65bd63);
+				background-image: -moz-linear-gradient(top, #9dd993, #65bd63);
+				background-image: -ms-linear-gradient(top, #9dd993, #65bd63);
+				background-image: -o-linear-gradient(top, #9dd993, #65bd63);
+				background-image: linear-gradient(top, #9dd993, #65bd63);
+				-webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 0 0 2px rgba(0, 0, 0, 0.2);
+				box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 0 0 2px rgba(0, 0, 0, 0.2);
+				-webkit-transition: left 0.15s ease-out;
+				-moz-transition: left 0.15s ease-out;
+				-ms-transition: left 0.15s ease-out;
+				-o-transition: left 0.15s ease-out;
+				transition: left 0.15s ease-out;
+			}
+
+			.switch-number, .switch-options {
+				background: none; border: 0; font-size: 1em; position: relative; margin-top: -2px; width: 100%;
+			}
+
+			.switch-options { padding: 5px; position: absolute; }
+
+			.switch-title { color: #FFF ; display: block; margin: 0 auto; text-align: center; }
+
+			#intro { color: #FFF; position: absolute; left: 0; top: 0; width: 20%; line-height: 1.5; transform: rotate(270deg) translateX(-120px); transform-origin: 2.6em 1.6em; text-transform: uppercase; text-align: right; }
+			#intro h1 { font-size: 90%; font-weight: normal; }
+
+			#options { margin: 1.5em 0 0 7em; position: relative; width: 58%; }
+			#options fieldset { border: 0; display: inline-block; }
+
+			#source { color: #AAA; position: absolute; right: 2em; top: 1em; height: 57%; width: 30%; }
+			#source textarea { color: #333; white-space: pre; width: 200px; transition: all 0.5s linear; height: 100%; width: 100%; }
+
+		</style>
+
+	</head>
+	<body>
+
+		<header id="intro">
+			<h1>Options generator for <a href="https://github.com/hakimel/reveal.js" target="_blank">reveal.js</a></h1>
+		</header>
+
+		<form id="options" class="container">
+
+			<!-- Controls -->
+			<fieldset>
+				<label class="switch-title">Controls</label>
+				<div class="switch">
+					<!-- On : true -->
+					<input type="radio" class="switch-input" name="controls" value="true" id="controls-off" checked />
+					<label for="controls-off" class="switch-label switch-label-off">ON</label>
+					<!-- Off : false -->
+					<input type="radio" class="switch-input" name="controls" value="false" id="controls-on" />
+					<label for="controls-on" class="switch-label switch-label-on">OFF</label>
+					<span class="switch-selection"></span>
+				</div>
+			</fieldset>
+
+			<!-- Progress bar -->
+			<fieldset>
+				<label class="switch-title">Progress bar</label>
+				<div class="switch">
+					<!-- On : true -->
+					<input type="radio" class="switch-input" name="progress" value="true" id="progress-off" checked />
+					<label for="progress-off" class="switch-label switch-label-off">ON</label>
+					<!-- Off : false -->
+					<input type="radio" class="switch-input" name="progress" value="false" id="progress-on" />
+					<label for="progress-on" class="switch-label switch-label-on">OFF</label>
+					<span class="switch-selection"></span>
+				</div>
+			</fieldset>
+
+			<!-- History -->
+			<fieldset>
+				<label class="switch-title">History</label>
+				<div class="switch">
+					<!-- On : true -->
+					<input type="radio" class="switch-input" name="history" value="true" id="history-off" checked />
+					<label for="history-off" class="switch-label switch-label-off">ON</label>
+					<!-- Off : false -->
+					<input type="radio" class="switch-input" name="history" value="false" id="history-on" />
+					<label for="history-on" class="switch-label switch-label-on">OFF</label>
+					<span class="switch-selection"></span>
+				</div>
+			</fieldset>
+
+			<!-- Keyboard -->
+			<fieldset>
+				<label class="switch-title">Keyboard</label>
+				<div class="switch">
+					<!-- On : true -->
+					<input type="radio" class="switch-input" name="keyboard" value="true" id="keyboard-off" checked />
+					<label for="keyboard-off" class="switch-label switch-label-off">ON</label>
+					<!-- Off : false -->
+					<input type="radio" class="switch-input" name="keyboard" value="false" id="keyboard-on" />
+					<label for="keyboard-on" class="switch-label switch-label-on">OFF</label>
+					<span class="switch-selection"></span>
+				</div>
+			</fieldset>
+
+			<!-- Overview -->
+			<fieldset>
+				<label class="switch-title">Overview</label>
+				<div class="switch">
+					<!-- On : true -->
+					<input type="radio" class="switch-input" name="overview" value="true" id="overview-off" checked />
+					<label for="overview-off" class="switch-label switch-label-off">ON</label>
+					<!-- Off : false -->
+					<input type="radio" class="switch-input" name="overview" value="false" id="overview-on" />
+					<label for="overview-on" class="switch-label switch-label-on">OFF</label>
+					<span class="switch-selection"></span>
+				</div>
+			</fieldset>
+
+			<!-- Center -->
+			<fieldset>
+				<label class="switch-title">Center</label>
+				<div class="switch">
+					<!-- On : true -->
+					<input type="radio" class="switch-input" name="center" value="true" id="center-off" checked />
+					<label for="center-off" class="switch-label switch-label-off">ON</label>
+					<!-- Off : false -->
+					<input type="radio" class="switch-input" name="center" value="false" id="center-on" />
+					<label for="center-on" class="switch-label switch-label-on">OFF</label>
+					<span class="switch-selection"></span>
+				</div>
+			</fieldset>
+
+			<!-- Loop -->
+			<fieldset>
+				<label class="switch-title">Loop</label>
+				<div class="switch">
+					<!-- On : true -->
+					<input type="radio" class="switch-input" name="loop" value="true" id="loop-off" />
+					<label for="loop-off" class="switch-label switch-label-off">ON</label>
+					<!-- Off : false -->
+					<input type="radio" class="switch-input" name="loop" value="false" id="loop-on" checked />
+					<label for="loop-on" class="switch-label switch-label-on">OFF</label>
+					<span class="switch-selection"></span>
+				</div>
+			</fieldset>
+
+			<!-- Rtl -->
+			<fieldset>
+				<label class="switch-title">Rtl</label>
+				<div class="switch">
+					<!-- On : true -->
+					<input type="radio" class="switch-input" name="rtl" value="true" id="rtl-off" />
+					<label for="rtl-off" class="switch-label switch-label-off">ON</label>
+					<!-- Off : false -->
+					<input type="radio" class="switch-input" name="rtl" value="false" id="rtl-on" checked />
+					<label for="rtl-on" class="switch-label switch-label-on">OFF</label>
+					<span class="switch-selection"></span>
+				</div>
+			</fieldset>
+
+			<!-- Mousewheel -->
+			<fieldset>
+				<label class="switch-title">Mousewheel</label>
+				<div class="switch">
+					<!-- On : true -->
+					<input type="radio" class="switch-input" name="mousewheel" value="true" id="mousewheel-off" />
+					<label for="mousewheel-off" class="switch-label switch-label-off">ON</label>
+					<!-- Off : false -->
+					<input type="radio" class="switch-input" name="mousewheel" value="false" id="mousewheel-on" checked />
+					<label for="mousewheel-on" class="switch-label switch-label-on">OFF</label>
+					<span class="switch-selection"></span>
+				</div>
+			</fieldset>
+
+			<!-- Rolling links -->
+			<fieldset>
+				<label class="switch-title">Rolling links</label>
+				<div class="switch">
+					<!-- On : true -->
+					<input type="radio" class="switch-input" name="rollingLinks" value="true" id="rollingLinks-off" checked />
+					<label for="rollingLinks-off" class="switch-label switch-label-off">ON</label>
+					<!-- Off : false -->
+					<input type="radio" class="switch-input" name="rollingLinks" value="false" id="rollingLinks-on" />
+					<label for="rollingLinks-on" class="switch-label switch-label-on">OFF</label>
+					<span class="switch-selection"></span>
+				</div>
+			</fieldset>
+
+			<!-- Autoslide -->
+			<fieldset>
+				<label class="switch-title">Autoslide <small>(ms)</small></label>
+				<div class="switch">
+					<input class="switch-label switch-number" type="number" name="autoSlide" value="0" step="50" />
+				</div>
+			</fieldset>
+
+			<!-- Transition -->
+			<fieldset>
+				<label class="switch-title">Transition</label>
+				<div class="switch">
+
+					<select class="switch-options" name="transition">
+						<option value="'cube'" selected="selected">cube</option>
+						<option value="'fade'">fade</option>
+						<option value="'page'">page</option>
+						<option value="'concave'">concave</option>
+						<option value="'zoom'">zoom</option>
+						<option value="'linear'">linear</option>
+						<option value="'none'">none</option>
+					</select>
+				</div>
+			</fieldset>
+
+			<p><small><a href="http://codepen.io/oggyindahouse/pen/Bamui" target="_blank">Sliding radio buttons</a> <span style="color: #FFF;">by</a> <a href="/oggyindahouse" target="_blank">Oguzhan Cansever</a></small></p>
+
+		</form>
+
+		<!-- Javascript options -->
+		<aside id="source">
+				<p>Include this in Reveal.initialize():</p>
+				<textarea class="values"></textarea>
+		</aside>
+
+		<!-- Reveal settings generator -->
+		<script src="http://code.jquery.com/jquery.min.js"></script>
+		<script>
+			// Bind change events
+			$('input, select').on('click', function() {
+				updateSource( $('#options') );
+			});
+
+			// Update on load
+			updateSource( $('#options') );
+
+			// Update javascript options
+			function updateSource( $el ) {
+				var options = $el.serializeArray();
+				var vals = [];
+				// Gather values
+				$.each(options, function( index, option ) {
+						if ( option.name && option.value ) {
+								var extra = option.name == 'transition' ? 'Reveal.getQueryHash().transition ||' : '';
+								var listItem =	option.name + ": " + extra + option.value + "," + '\n';
+								vals.push(listItem);
+						}
+				});
+				// Append results
+				$('#source').find('.values').empty().append( vals.join(""));
+			}
+		</script>
+
+	</body>
+
+</html>
