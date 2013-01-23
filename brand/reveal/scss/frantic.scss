@@ -9,7 +9,7 @@
     @@@B      #@@G   @@@@@B     @@@  @@@     @@@@    @@@M   ;@@@:   2@@@@@@@@#,
 
 	Frantic theme for reveal.js.
-	Copyright (C) 2013 Frantic.com
+	2013 Frantic.com
 
 */
 
@@ -23,14 +23,14 @@
 
 // Include theme-specific fonts
 
-	@import url(http://fonts.googleapis.com/css?family=Montserrat:700);
-	@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic);
+	@import url('//fonts.googleapis.com/css?family=Montserrat:700');
+	@import url('//fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic');
 
 
 // Override theme settings (see ../template/settings.scss)
 
 	$backgroundColor: #111;
-	$mainFont: 'Open Sans', Times, 'Times New Roman', serif;
+	$mainFont: 'Open Sans', sans-serif;
 	$linkColor: #e7ad52;
 	$linkColorHover: lighten( $linkColor, 20% );
 	$headingFont: 'Montserrat', Impact, sans-serif;

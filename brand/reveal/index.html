@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8" />
+
+		<title>Frantic reveal.js template</title>
+
+		<meta name="description" content="Presentation description" />
+		<meta name="author" content="Author name" />
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<!-- Presentation styles -->
+		<link rel="stylesheet" href="http://frc.github.com/reveal/css/reveal.css" />
+		<link rel="stylesheet" href="http://frc.github.com/reveal/css/frantic.css" />
+
+		<!-- Syntax highlighting -->
+		<link rel="stylesheet" href="http://frc.github.com/reveal/css/highlight/tomorrow.css" />
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="http://frc.github.com/reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print" />' );
+		</script>
+
+		<!--[if lt IE 9]>
+			<script src="http://frc.github.com/reveal/js/polyfills/html5shiv.js"></script>
+		<![endif]-->
+
+		<style type="text/css">
+			#slide-number {
+				color: #FFF; font-family: Georgia, serif; font-size: 1.6em;
+				position: absolute; top: 1em; right: 1em;
+			}
+			.slides table td { font-size: 13px; }
+			.slides ol { margin-bottom: 1em; }
+			.slides h1, .slides h2, .slides h3, .slides h4, .slides h5, .slides h6 { word-break: normal; }
+			.slides pre, .slides .label { float: left; }
+			.slides small.gray { background: #333; color: #ddd; }
+			.slides .label { line-height: 1.65em; padding: 0 0.5em; }
+			.slides pre { line-height: 1.2em; margin: 0 0 1.2em; padding-left: 0.25em; width: 90%; }
+			.cf:before, .cf:after { content: " "; display: table; }
+			.cf:after { clear: both; }
+			.cf { *zoom: 1; }
+		</style>
+
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<p><img src="http://frc.github.com/reveal/images/frantic_logo_white.png" alt="Frantic logo" /></p>
+					<h1 class="orange">Presentation title</h1>
+					<h2>Subtitle</h2>
+				</section>
+
+				<section data-state="light-gray">
+					<p><img src="http://frc.github.com/reveal/images/frantic_logo_white.png" alt="Frantic logo" /></p>
+					<h1 class="orange">Presentation title</h1>
+					<h2>Subtitle</h2>
+				</section>
+
+				<section data-state="gray">
+					<p><img src="http://frc.github.com/reveal/images/frantic_logo_white.png" alt="Frantic logo" /></p>
+					<h1 class="orange">Presentation title</h1>
+					<h2>Subtitle</h2>
+				</section>
+
+				<section data-state="dark-gray">
+					<p><img src="http://frc.github.com/reveal/images/frantic_logo_white.png" alt="Frantic logo" /></p>
+					<h1 class="orange">Presentation title</h1>
+					<h2>Subtitle</h2>
+				</section>
+
+				<section data-state="green">
+					<p><img src="http://frc.github.com/reveal/images/frantic_logo_white.png" alt="Frantic logo" /></p>
+					<h1 class="orange">Presentation title</h1>
+					<h2>Subtitle</h2>
+				</section>
+
+				<section data-state="cyan">
+					<p><img src="http://frc.github.com/reveal/images/frantic_logo_white.png" alt="Frantic logo" /></p>
+					<h1 class="orange">Presentation title</h1>
+					<h2>Subtitle</h2>
+				</section>
+
+				<section>
+					<p><img src="http://frc.github.com/reveal/images/frantic_logo_white.png" alt="Frantic logo" /></p>
+					<h1 class="orange">Presentation title</h1>
+					<h2>Subtitle</h2>
+				</section>
+
+				<section>
+					<p><img src="http://frc.github.com/reveal/images/frantic_logo_white.png" alt="Frantic logo" /></p>
+					<h1 class="orange">Presentation title</h1>
+					<h2>Subtitle</h2>
+				</section>
+
+			</div>
+
+		</div>
+
+		<div id="slide-number"></div>
+
+		<script src="http://frc.github.com/reveal/js/libs/head.min.js"></script>
+		<script src="http://frc.github.com/reveal/js/libs/reveal.min.js"></script>
+		<script src="http://code.jquery.com/jquery.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme,
+				transition: Reveal.getQueryHash().transition || 'concave', // default/cube/page/concave/zoom/linear/none
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'http://frc.github.com/reveal/js/libs/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'http://frc.github.com/reveal/js/plugins/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'http://frc.github.com/reveal/js/plugins/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'http://frc.github.com/reveal/js/plugins/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'http://frc.github.com/reveal/js/plugins/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'http://frc.github.com/reveal/js/plugins/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'http://frc.github.com/reveal/plugins/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			// Fires each time a new slide is activated
+			});
+
+			// Add slide numbers
+			Reveal.addEventListener( 'slidechanged', function( event ) {
+				// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+				if ( event.indexh == 0 ) {
+					$("#slide-number").html('<strong>Intro</strong>');
+				} else {
+					$("#slide-number").html('<strong>' + event.indexh + '</strong>');
+				}
+			});
+		</script>
+
+	</body>
+</html>

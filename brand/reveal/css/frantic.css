@@ -1,5 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Montserrat:700);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic);
+@import url("//fonts.googleapis.com/css?family=Montserrat:700");
+@import url("//fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic");
 /*
 
     @@@@@@@@@ B@@@@@@Mi        3@@@  @@@:    :@@@ @@@@@@@@@..@@@;    ;H@@@@Hr
@@ -11,7 +11,7 @@
     @@@B      #@@G   @@@@@B     @@@  @@@     @@@@    @@@M   ;@@@:   2@@@@@@@@#,
 
 	Frantic theme for reveal.js.
-	Copyright (C) 2013 Frantic.com
+	2013 Frantic.com
 
 */
 /*********************************************
@@ -22,7 +22,7 @@ body {
   background-color: #111111; }
 
 .reveal {
-  font-family: "Open Sans", Times, "Times New Roman", serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 30px;
   font-weight: 200;
   letter-spacing: -0.02em;
@@ -32,6 +32,24 @@ body {
   color: white;
   background: #e7ad52;
   text-shadow: none; }
+
+.cf:before, .cf:after {
+  content: " ";
+  display: table; }
+
+.cf:after {
+  clear: both; }
+
+.cf {
+  *zoom: 1; }
+
+.dim {
+  opacity: 0;
+  transition: all 0.5s ease-in-out; }
+
+.label {
+  line-height: 1.65em;
+  padding: 0 0.5em; }
 
 /*********************************************
  * HEADERS
@@ -138,12 +156,109 @@ body {
 /*********************************************
  * CUSTOM STYLES
  *********************************************/
+.corner-text {
+  color: #FFF;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6em;
+  position: absolute;
+  z-index: 1;
+  tansition: all 0.3s ease-in-out; }
+
+/*    Logo   */
+.logo {
+  background: url("http://frc.github.com/reveal/assets/images/frantic_logo_white.png") no-repeat;
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 15px;
+  text-indent: -9999em;
+  width: 150px;
+  height: 50px;
+  z-index: 2;
+  background-size: 100% auto; }
+
+.logo.inverted {
+  background-image: url("http://frc.github.com/reveal/assets/images/frantic_logo_black.png"); }
+
+/*    Control panel   */
+#panel {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), transparent);
+  border-radius: 5px;
+  color: #FFF;
+  opacity: 0.8;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6;
+  padding: 0 1em;
+  position: absolute;
+  bottom: 100px;
+  left: 15px;
+  overflow: hidden;
+  width: 500px;
+  z-index: 2; }
+
+#panel .title {
+  text-transform: uppercase; }
+
+#more-info a, a[href="#more-info"] {
+  color: orange;
+  transition: color 0.5s linear;
+  text-decoration: none; }
+
+#more-info a:hover, a[href="#more-info"]:hover {
+  color: #FFF; }
+
+#show-controls {
+  bottom: 0;
+  left: 0;
+  font-size: 150%;
+  padding: 1.5em;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  text-decoration: none; }
+
+#show-controls:hover {
+  font-size: 180%;
+  opacity: 1; }
+
+/*    Slide number   */
+#slide-number {
+  top: 15px;
+  right: 15px; }
+
+/*    Slides   */
 .slides .label {
   display: inline-block;
   padding: 2px; }
 
+.slides .image {
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.3);
+  display: inline-block;
+  padding: 5px; }
+
 .slides code {
   max-height: 500px; }
+
+.slides dt, .slides h1, .slides h2, .slides h3, .slides p {
+  margin-bottom: 1em; }
+
+.slides h1, .slides h2, .slides h3, .slides h4, .slides h5, .slides h6 {
+  word-break: normal; }
+
+.slides h1 {
+  margin-bottom: 0.4em;
+  text-transform: uppercase; }
+
+.slides h3 {
+  text-transform: none; }
+
+.slides ol {
+  margin-bottom: 1em; }
+
+.slides pre {
+  line-height: 1.2em;
+  margin: 0 0 1.2em;
+  padding-left: 0.25em;
+  width: 90%; }
 
 .slides table {
   margin: 0 auto; }
@@ -159,67 +274,70 @@ body {
   padding-right: 15px; }
 
 .slides table td {
-  font-size: 11px;
+  font-size: 13px;
   line-height: normal;
   padding-bottom: 5px; }
 
-.slides dt,
-.slides h1,
-.slides h2,
-.slides h3,
-.slides p {
-  margin-bottom: 1em; }
+.slides .toc ul {
+  list-style: none; }
 
-.slides h1 {
-  text-transform: uppercase; }
+.slides .toc ol ol {
+  margin-top: 1em;
+  margin-bottom: 0; }
 
-.slides h3 {
-  text-transform: none; }
+.slides .toc ol ol li {
+  font-size: 0.7em;
+  list-style: georgian;
+  display: inline-block;
+  margin: 0 1em 1em -2em;
+  padding-left: 3em; }
+
+.slides .code-block pre,
+.slides .code-block .label {
+  float: left; }
+
+.slides .label {
+  background: #333;
+  color: #ddd; }
+
+.toggle-slide {
+  display: none; }
 
 /*********************************************
  * STATES
  *********************************************/
-h1.black, h2.black, small.black,
-.black .reveal .state-background {
+.label.black, .black .reveal .state-background {
   background: black;
   color: white; }
 
-h1.white, h2.white, small.white,
-.white .reveal .state-background {
+.label.white, .white .reveal .state-background {
   background: white;
   color: black; }
 
-h1.cyan, h2.cyan, small.cyan,
-.cyan .reveal .state-background {
+.label.cyan, .cyan .reveal .state-background {
   background: #12c1df;
   color: white; }
 
-h1.orange, h2.orange, small.orange,
-.orange .reveal .state-background {
+.label.orange, .orange .reveal .state-background {
   background: #fba940;
   color: white; }
 
-h1.red, h2.red, small.red,
-.red .reveal .state-background {
+.label.red, .red .reveal .state-background {
   background: #e70033;
   color: white; }
 
-h1.green, h2.green, small.green,
-.green .reveal .state-background {
+.label.green, .green .reveal .state-background {
   background: #97d937;
   color: white; }
 
-h1.gray, h2.gray, small.gray,
-.gray .reveal .state-background {
+.label.gray, .gray .reveal .state-background {
   background: #d0cbc4;
   color: white; }
 
-h1.light-gray, h2.light-gray, small.light-gray,
-.light-gray .reveal .state-background {
+.label.light-gray, .light-gray .reveal .state-background {
   background: #e6e6e6;
   color: black; }
 
-h1.dark-gray, h2.dark-gray, small.dark-gray,
-.dark-gray .reveal .state-background {
+.label.dark-gray, .dark-gray .reveal .state-background {
   background: #323232;
   color: white; }
