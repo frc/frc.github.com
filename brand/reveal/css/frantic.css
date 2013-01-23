@@ -166,7 +166,7 @@ body {
 
 /*    Logo   */
 .logo {
-  background: url("http://frc.github.com/reveal/assets/images/frantic_logo_white.png") no-repeat;
+  background: url("http://frc.github.com/assets/images/frantic_logo_white.png") no-repeat;
   display: block;
   position: absolute;
   top: 20px;
@@ -178,7 +178,7 @@ body {
   background-size: 100% auto; }
 
 .logo.inverted {
-  background-image: url("http://frc.github.com/reveal/assets/images/frantic_logo_black.png"); }
+  background-image: url("http://frc.github.com/assets/images/frantic_logo_black.png"); }
 
 /*    Control panel   */
 #panel {

@@ -26,7 +26,7 @@
 	.cf:before, .cf:after { content: " "; display: table; }
 	.cf:after { clear: both; }
 	.cf { *zoom: 1; }
-	
+
 	.dim { opacity: 0; transition: all .5s ease-in-out; }
 
 	.label { line-height: 1.65em; padding: 0 0.5em; }
@@ -165,14 +165,14 @@
 		position: absolute; z-index: 1; tansition: all 0.3s ease-in-out;
 	}
 
-	/*    Logo   */	
+	/*    Logo   */
 	.logo {
-		background: url('http://frc.github.com/reveal/assets/images/frantic_logo_white.png') no-repeat;
+		background: url('http://frc.github.com/assets/images/frantic_logo_white.png') no-repeat;
 		display: block; position: absolute; top: 20px; left: 15px; text-indent: -9999em;
 		width: 150px; height: 50px; z-index: 2; background-size: 100% auto;
 	}
 	.logo.inverted {
-		background-image: url('http://frc.github.com/reveal/assets/images/frantic_logo_black.png');
+		background-image: url('http://frc.github.com/assets/images/frantic_logo_black.png');
 	}
 
 	/*    Control panel   */
@@ -192,7 +192,7 @@
 		transition: all .5s ease-in-out; text-decoration: none;
 	}
 	#show-controls:hover { font-size: 180%; opacity: 1; }
-	
+
 	/*    Slide number   */
 	#slide-number { top: 15px; right: 15px; }
 
@@ -213,7 +213,7 @@
 	.slides table th { font-size: 85%; font-weight: bold; line-height: normal; padding-bottom: 8px; text-shadow: none; }
 	.slides table th, .slides table td { padding-right: 15px; }
 	.slides table td { font-size: 13px; line-height: normal; padding-bottom: 5px; }
-	
+
 	.slides .toc ul { list-style: none; }
 	.slides .toc ol ol { margin-top: 1em; margin-bottom: 0; }
 	.slides .toc ol ol li { font-size: 0.7em; list-style: georgian; display: inline-block; margin: 0 1em 1em -2em; padding-left: 3em; }
