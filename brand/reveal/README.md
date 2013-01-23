@@ -14,7 +14,6 @@ reveal.js comes with a broad range of features including [nested slides](https:/
 
 Slides are written using HTML or markdown but there's also an online editor for those of you who prefer a more traditional user interface. Give it a try at [www.rvl.io](http://www.rvl.io).
 
-
 ## Instructions
 
 ### Markup
@@ -97,6 +96,10 @@ Reveal.initialize({
 ```
 
 Note that the new default vertical centering option will break compatibility with slides that were using transitions with backgrounds (`cube` and `page`). To restore the previous behavior, set `center` to `false`.
+
+### Generator
+
+The demo presentation includes a generator for easily changing the configuration settings: http://frc.github.com/brand/reveal/#/11
 
 ### Dependencies
 
@@ -319,16 +322,13 @@ Then:
 
 ## Theming
 
-The framework comes with a few different themes included:
+The Frantic reveal theme uses a single theme file for all of its presentations.
 
-- default: Gray background, white text, blue links
-- beige: Beige background, dark text, brown links
-- sky: Blue background, thin white text, blue links
-- night: Black background, thick white text, orange links
-- serif: Cappuccino background, gray text, brown links
-- simple: White background, black text, blue links
+For custom styles, you can include a simple &lt;style> block at the top of your presentation.
 
-Each theme is available as a separate stylesheet. To change theme you will need to replace **default** below with your desired theme name in index.html:
+#### SCSS
+- If you plan on making changes to the brand theme, the corresponsing SCSS files are located under the 'scss/' folder.
+- Output the file as 'css/frantic.css'. You can use Codekit or another SCSS builder to process the styles.
 
 ```html
 <link rel="stylesheet" href="css/theme/default.css" id="theme">
@@ -344,11 +344,12 @@ reveal.js is built using the task-based command line build tool [grunt.js](http:
 If you want to customise reveal.js without running grunt.js you can alter the HTML to point to the uncompressed source files (css/reveal.css & js/reveal.js).
 
 ### Folder Structure
-- **css/** Core styles without which the project does not function
+- **scss/** Main theme styles in their original SCSS format
+- **css/** Compiled styles from the SCSS files + highlight.js and reveal default css files.
 - **js/** Like above but for JavaScript
-- **plugin/** Components that have been developed as extensions to reveal.js
-- **lib/** All other third party assets (JavaScript, CSS, fonts)
-
+- **js/libs/** All other third party assets
+- **js/plugins/** Components that have been developed as extensions to reveal.js
+- **js/polyfills/** Files for making browsers behave nicely
 
 ## License
 
