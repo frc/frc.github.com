@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+		<meta charset="utf-8">
+
+		<title>Frantic: Brand template</title>
+
+		<meta name="description" content="Frantic brand template for reveal.js." />
+		<meta name="author" content="Niko Pettersen, Hakim El Hattab" />
+
+		<link rel="dns-prefetch" href="http://code.jquery.com" />
+		<link rel="dns-prefetch" href="http://frc.github.com" />
+		<link rel="dns-prefetch" href="http://fonts.google.com" />
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<!-- Presentation styles -->
+		<link rel="stylesheet" href="http://frc.github.com/brand/reveal/css/reveal.css" />
+		<link rel="stylesheet" href="http://frc.github.com/brand/reveal/css/frantic.css" />
+
+		<!-- Syntax highlighting -->
+		<link rel="stylesheet" href="http://frc.github.com/brand/reveal/css/highlight/tomorrow.css" />
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="http://frc.github.com/brand/reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print" />' );
+		</script>
+
+		<script src="https://raw.github.com/LeaVerou/prefixfree/gh-pages/prefixfree.min.js"></script>
+
+		<!--[if lt IE 9]>
+			<script src="http://frc.github.com/brand/reveal/js/polyfills/html5shiv.js"></script>
+		<![endif]-->
+
+		<style type="text/css">
+			#generator { height: 60%; width: 100%; }
+		</style>
+
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<!-- Intro -->
+				<section>
+					<p><img src="http://frc.github.com/brand/assets/images/frantic_logo_white.png" alt="Frantic logo" /></p>
+					<h1 class="orange">HTML based<br />presentation</h1>
+					<h2>Topic</h2>
+				</section>
+
+				<!-- Table of contents -->
+				<section class="toc">
+
+					<h2>Dynamic table of contents</h2>
+					<ol id="table-of-contents"></ol>
+
+				</section>
+
+				<!-- Colors -->
+				<section title="Colour states">
+
+					<section title="Black" data-state="black">
+						Black
+					</section>
+
+					<section title="Dark-gray" data-state="dark-gray">
+						Dark-gray
+					</section>
+
+					<section title="Gray" data-state="gray">
+						Gray
+					</section>
+
+					<section title="Light-gray" data-state="light-gray">
+						Light gray
+					</section>
+
+					<section title="White" data-state="white">
+						White
+					</section>
+
+					<section title="Cyan" data-state="cyan">
+						Cyan
+					</section>
+
+					<section title="Green" data-state="green">
+						Green
+					</section>
+
+					<section title="Orange" data-state="orange">
+						Orange
+					</section>
+
+					<section title="Red" data-state="red">
+						Red
+					</section>
+
+					<section title="Green" data-state="green">
+						Green
+					</section>
+
+				</section>
+
+				<!-- Shortcuts -->
+				<section title="Clever shortcuts">
+
+					<!-- Logo -->
+					<section title="Logo">
+						<h2>Logo</h2>
+						<p>Sami is testing e logo will always take you back to the table of contents. You can use it as a shortcut in bigger presentations.</p>
+					</section>
+
+					<!-- Slide numbers -->
+					<section title="Slide numbers">
+						<h2>Slide numbers</h2>
+						<p>The current slide number can be seen at the top left corner.</p>
+						<p>You can turn this off by pressing<br /><br /><strong>V</strong></p>
+					</section>
+
+					<!-- Pause -->
+					<section title="Lights out">
+						<h2>Lights out</h2>
+						<p>If you want to take a break, press <strong>B</strong> to dim the lights out.</p>
+					</section>
+
+					<!-- Zoom -->
+					<section title="Point of View">
+						<h2>Point of View</h2>
+						<p>
+							Press <strong>ESC</strong> to enter the slide overview. Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
+						</p>
+					</section>
+
+					<!-- Controls -->
+					<section title="Show controls">
+						<h2>Show controls</h2>
+						<p><small>Bring</small> your cursor <small>to the</small> bottom left <small>corner.</small></p>
+						<p>Or</p>
+						<p><small>Press</small><br /><br /><strong>C</strong></p>
+					</section>
+
+				</section>
+
+				<!-- Fragments -->
+				<section title="Fragments">
+
+					<section title="Views">
+						<h2>Fragmented Views</h2>
+						<p>Hit the next arrow...</p>
+						<p class="fragment">... to step through ...</p>
+						<ol>
+							<li class="fragment"><code>any type</code></li>
+							<li class="fragment"><em>of view</em></li>
+							<li class="fragment"><strong>fragments</strong></li>
+						</ol>
+						<aside class="notes">
+							This slide has fragments which are also stepped through in the notes window.
+						</aside>
+					</section>
+
+					<section title="Styles">
+						<h2>Fragment Styles</h2>
+						<p>There's a few styles of fragments, like:</p>
+						<p class="fragment grow">grow</p>
+						<p class="fragment shrink">shrink</p>
+						<p class="fragment roll-in">roll-in</p>
+						<p class="fragment fade-out">fade-out</p>
+						<p class="fragment highlight-red">highlight-red</p>
+						<p class="fragment highlight-green">highlight-green</p>
+						<p class="fragment highlight-blue">highlight-blue</p>
+					</section>
+
+				</section>
+
+				<!-- Quotes -->
+				<section title="Quotes">
+					<h2>Quotes</h2>
+					<p>
+						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+						The nice thing about standards is that there are so many to choose from</q> and block:
+					</p>
+					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+						For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
+						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.
+					</blockquote>
+				</section>
+
+				<!-- Images -->
+				<section title="Images">
+
+					<section title="Black" data-state="black">
+						<h2>Spectacular image!</h2>
+						<a class="image" href="http://instagram.com/p/Ufy-CHwX7M/" target="_blank">
+							<img width="320" height="299" src="http://distilleryimage8.s3.amazonaws.com/1ae81a345ee911e29f1422000a1fbc0e_7.jpg" alt="Meny">
+						</a>
+					</section>
+
+					<section title="Dark-gray" data-state="dark-gray">
+						<h2>Spectacular image!</h2>
+						<a class="image" href="http://instagram.com/p/Ufy-CHwX7M/" target="_blank">
+							<img width="320" height="299" src="http://distilleryimage8.s3.amazonaws.com/1ae81a345ee911e29f1422000a1fbc0e_7.jpg" alt="Meny">
+						</a>
+					</section>
+
+					<section title="Gray" data-state="gray">
+						<h2>Spectacular image!</h2>
+						<a class="image" href="http://instagram.com/p/Ufy-CHwX7M/" target="_blank">
+							<img width="320" height="299" src="http://distilleryimage8.s3.amazonaws.com/1ae81a345ee911e29f1422000a1fbc0e_7.jpg" alt="Meny">
+						</a>
+					</section>
+
+					<section title="Light-gray" data-state="light-gray">
+						<h2>Spectacular image!</h2>
+						<a class="image" href="http://instagram.com/p/Ufy-CHwX7M/" target="_blank">
+							<img width="320" height="299" src="http://distilleryimage8.s3.amazonaws.com/1ae81a345ee911e29f1422000a1fbc0e_7.jpg" alt="Meny">
+						</a>
+					</section>
+
+					<section title="White" data-state="white">
+						<h2>Spectacular image!</h2>
+						<a class="image" href="http://instagram.com/p/Ufy-CHwX7M/" target="_blank">
+							<img width="320" height="299" src="http://distilleryimage8.s3.amazonaws.com/1ae81a345ee911e29f1422000a1fbc0e_7.jpg" alt="Meny">
+						</a>
+					</section>
+
+					<section title="Cyan" data-state="cyan">
+						<h2>Spectacular image!</h2>
+						<a class="image" href="http://instagram.com/p/Ufy-CHwX7M/" target="_blank">
+							<img width="320" height="299" src="http://distilleryimage8.s3.amazonaws.com/1ae81a345ee911e29f1422000a1fbc0e_7.jpg" alt="Meny">
+						</a>
+					</section>
+
+					<section title="Green" data-state="green">
+						<h2>Spectacular image!</h2>
+						<a class="image" href="http://instagram.com/p/Ufy-CHwX7M/" target="_blank">
+							<img width="320" height="299" src="http://distilleryimage8.s3.amazonaws.com/1ae81a345ee911e29f1422000a1fbc0e_7.jpg" alt="Meny">
+						</a>
+					</section>
+
+					<section title="Orange" data-state="orange">
+						<h2>Spectacular image!</h2>
+						<a class="image" href="http://instagram.com/p/Ufy-CHwX7M/" target="_blank">
+							<img width="320" height="299" src="http://distilleryimage8.s3.amazonaws.com/1ae81a345ee911e29f1422000a1fbc0e_7.jpg" alt="Meny">
+						</a>
+					</section>
+
+					<section title="Red" data-state="red">
+						<h2>Spectacular image!</h2>
+						<a class="image" href="http://instagram.com/p/Ufy-CHwX7M/" target="_blank">
+							<img width="320" height="299" src="http://distilleryimage8.s3.amazonaws.com/1ae81a345ee911e29f1422000a1fbc0e_7.jpg" alt="Meny">
+						</a>
+					</section>
+
+					<section title="Green" data-state="green">
+						<h2>Spectacular image!</h2>
+						<a class="image" href="http://instagram.com/p/Ufy-CHwX7M/" target="_blank">
+							<img width="320" height="299" src="http://distilleryimage8.s3.amazonaws.com/1ae81a345ee911e29f1422000a1fbc0e_7.jpg" alt="Meny">
+						</a>
+					</section>
+
+				</section>
+
+				<!-- Transitions -->
+				<section id="transitions" title="Transitions">
+					<h2>Transition Styles</h2>
+					<p>
+						You can select from different transitions, like: <br>
+						<a href="?transition=cube#/transitions">Cube</a> -
+						<a href="?transition=page#/transitions">Page</a> -
+						<a href="?transition=concave#/transitions">Concave</a> -
+						<a href="?transition=zoom#/transitions">Zoom</a> -
+						<a href="?transition=linear#/transitions">Linear</a> -
+						<a href="?transition=none#/transitions">None</a> -
+						<a href="?#/transitions">Default</a>
+					</p>
+				</section>
+
+				<!-- Export to PDF -->
+				<section title="Export to PDF">
+					<h2>Export to PDF</h2>
+					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
+					<iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="356" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
+					<script>
+						document.getElementById('slideshare').attributeName = 'allowfullscreen';
+					</script>
+				</section>
+
+				<!-- Code -->
+				<section title="Embedding code">
+
+					<section title="CSS">
+						<h2>Embedding Code</h2>
+						<h3>CSS</h3>
+						<div class="code-block">
+							<span class="label css">CSS</span><pre><code contenteditable>/* Reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* General styles */
+body {
+	background: linear-gradient(#EEE, #FFF);
+	font-family: 'Open Sans', sans-serif;
+	font-size: 62.5%;
+}
+
+a {
+	color: #333;
+	transition: all 0.3s ease-in-out;
+	text-decoration: underline;
+}
+a:hover { color: orange; }
+
+h1, h2, h3 {
+	font-family: 'Titillium Web', sans-serif;
+	font-weight: 400;
+	letter-spacing: -1px;
+	margin-bottom: 0.85rem;
+}
+</code></pre>
+						</div>
+						<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+					</section>
+
+					<section title="HTML">
+						<h2>Embedding Code</h2>
+						<h3>HTML</h3>
+						<div class="code-block">
+							<span class="label html">HTML</span><pre><code contenteditable>&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+
+	&lt;meta charset="utf-8" />
+	&lt;title>The most inspiring web design trends 2012&lt;/title>
+
+&lt;/head>
+
+&lt;body>
+
+	&lt;h1>The most inspiring web design trends 2012&lt;/h1>
+
+&lt;/body>
+&lt;/html></code></pre>
+						</div>
+						<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+					</section>
+
+					<section title="JavaScript">
+						<h2>Embedding Code</h2>
+						<h3>JavaScript</h3>
+						<div class="code-block">
+							<span class="label js">JS</span><pre><code contenteditable>// Update javascript options
+function updateSource( $form ) {
+
+	var options = $form.serializeArray();
+	var values = [];
+vvcc
+	// Gather values
+	$.each(options, function( index, option ) {
+		if ( option.name && option.value ) {
+			var listItem =	option.name +
+			": " + option.value + "," + '\n';
+			values.push(listItem);
+		}
+	});
+
+	// Append results
+	$('#source').find('.values').empty().append( values.join("") );
+
+}</code></pre>
+						</div>
+						<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+					</section>
+
+					<section title="Perl">
+						<h2>Embedding Code</h2>
+						<h3>Perl</h3>
+						<div class="code-block">
+							<span class="label perl">PERL</span><pre><code contenteditable>Use Image::Magick;
+
+use warnings;
+use strict;
+
+my $dir = '/Users/Frantic/images';
+my $pdffile = '/Users/Frantic/portfolio.pdf';
+
+chdir( $dir ) or die "Cant chdir to $dir $!";
+while( <*.png> ) {
+  push @files, $_;
+}
+
+my $pdf = Image::Magick->new();
+
+foreach $file ( sort @files ) {
+  my $img = Image::Magick->new();
+  $rc = $img->Read( $file );
+  warn $rc if $rc;
+  push @$pdf, $img;
+}
+
+$pdf->[0]->Coalesce();
+$pdf->Write( $pdffile );</code></pre>
+						</div>
+					</section>
+
+					<section title="PHP">
+						<h2>Embedding Code</h2>
+						<h3>PHP</h3>
+						<div class="code-block">
+							<small class="label php">PHP</small><pre><code contenteditable>&lt;html>
+&lt;body>
+
+&lt;?php
+$x=1;
+switch ($x)
+{
+case 1:
+  echo "Number 1";
+  break;
+case 2:
+  echo "Number 2";
+  break;
+case 3:
+  echo "Number 3";
+  break;
+default:
+  echo "No number between 1 and 3";
+}
+?>
+
+&lt;/body></code></pre>
+						</div>
+					</section>
+
+					<section data-markdown title="Markdown">
+						<h2>Embedding Code</h2>
+						<h3>Markdown</h3>
+						<script type="text/template">
+							## Markdown support
+
+							For those of you who like that sort of thing. Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
+
+								<section data-markdown>
+								  ## Markdown support
+
+								  For those of you who like that sort of thing.
+								  Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
+								</section>
+						</script>
+					</section>
+
+				</section>
+
+				<section title="Custom events">
+					<h2>Custom Events</h2>
+					<p>
+						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
+					</p>
+					<div class="code-block">
+						<span class="label js">JS</span><pre><code contenteditable style="font-size: 18px; margin-top: 20px;">Reveal.addEventListener( 'customevent', function() {
+	console.log( '"customevent" has fired' );
+});</code></pre>
+					</div>
+				</section>
+
+				<section title="Custom settings">
+					<h2>Custom settings</h2>
+					<p>Use the generator to save a few seconds of your time.</p>
+					<p><small>Replace the values in your template with the ones from the text box:</small></p>
+					<iframe id="generator" src="generator.html"></iframe>
+				</section>
+
+				<section>
+					<p><img src="http://frc.github.com/brand/assets/images/frantic_logo_white.png" alt="Frantic logo" /></p>
+					<h2 style="line-height: 0.73"><small>MMX</small><strong>III</strong></h2>
+				</section>
+
+			</div>
+
+		</div>
+
+		<nav>
+			<a href="#/1" class="corner-text logo" rel="home" title="Table of contents">Home</a>
+			<a href="#panel" class="corner-text slideToggle" id="show-controls" title="Show commands">?</a>
+		</nav>
+
+		<div id="panel" class="toggle-slide">
+			<h3>Controls</h3>
+			<dl>
+				<dt><strong>F</strong></dt>
+				<dd>Fullscreen</dd>
+				<dt><strong>ESC</strong></dt>
+				<dd>Slide overview</dd>
+				<dt><strong>H / J / K / L</strong></dt>
+				<dd>Left / Down / Up / Right</dd>
+				<dt><strong>C</strong></dt>
+				<dd>Show help</dd>
+				<dt><strong>V</strong></dt>
+				<dd>Dim controls</dd>
+				<dt><strong>B</strong></dt>
+				<dd>Dim the entire slideshow</dd>
+				<dt><strong>Zoom</strong></dt>
+				<dd><p>Hold down alt and click on any element to zoom in.</p>
+					<p>Alt + click anywhere to zoom back out.</p></dd>
+			</dl>
+			<h3>Custom code</h3>
+			<p><a href="#more-info" class="fadeToggle">Toggle code</a></p>
+			<div id="more-info" class="toggle-slide">
+				<ul>
+					<li><p>Link to other slides using <code>&lt;a href="#/15"&gt;</code>. The corresponding hash-tags can be found in the URL of the page you are linking to.</p></li>
+					<li><p>Add <code>&lt;section data-state="color"></code> to activate background change. List of available classes:<p>
+						<p><span class="label green">green</span> <span class="label cyan">cyan</span> <span class="label orange">orange</span> <span class="label red">red</span> <span class="label light-gray">light-gray</span> <span class="label gray">gray</span> <span class="label dark-gray">dark-gray</span></p>
+					</li>
+					<li><p>Add <code>class="fragment"</code> to elements to activate a step-based slide. It will display one fragment (block) after another. <a href="#/4">See example</a>.</p></li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="slide-number" class="corner-text"></div>
+
+		<script src="http://frc.github.com/brand/reveal/js/libs/head.min.js"></script>
+		<script src="http://frc.github.com/brand/reveal/js/libs/reveal.min.js"></script>
+		<script src="http://code.jquery.com/jquery.min.js"></script>
+
+		<!-- Reveal -->
+		<script>
+
+			// Toggle fade
+			$('.fadeToggle').each(function() {
+				$(this).on('click', function( e ) {
+					e.preventDefault();
+					var target = $(this).attr('href');
+					$(target).fadeToggle('slow');
+				});
+			});
+
+			// Toggle slide
+			$('.slideToggle').each(function() {
+				$(this).on('click', function( e ) {
+					e.preventDefault();
+					var target = $(this).attr('href');
+					$(target).slideToggle('slow');
+				});
+			});
+
+			// Keyboard
+			$('html').keypress(function( e ) {
+				// C: Show commands
+				if ( e.charCode == 67 || e.charCode == 99 ) { // C c
+					$('#show-controls').click();
+				}
+				// V: Dim logo and page number
+				if ( e.charCode == 86 || e.charCode == 118 ) { // V v
+					$('.corner-text').toggleClass('dim');
+				}
+				// X:
+				if ( e.charCode == 88 || e.charCode == 120 ) { // X x
+					$('.corner-text').toggleClass('dim');
+				}
+			});
+
+			// Create an index of all the slides
+			$('.slides > section').each(function( i ) {
+
+				var toc = [],
+				$parentSection = $(this),
+				$subSections = $parentSection.find('section');
+
+				if ( i > 0 && $parentSection.attr('title') ) {
+
+					// Sub-sections (disabled)
+					// Too messy if there are a lot of sub-sections
+					/*if ( $subSections.length > 0 ) {
+						// Show parent title without a link and start a new list
+						toc.push( '<li>' + $(this).attr('title') + '<ol>');
+						$parentSection.find('section').each(function( ix ) {
+							toc.push('<li><a href="#/' + i + '/' + ix +'">' + $(this).attr('title') + '</a></li>');
+						});
+						toc.push('</ol></li>');
+
+					// One slide only
+					} else {
+						toc.push('<li><a href="#/' + i + '">' + $(this).attr('title') + '</a></li>');
+					}*/
+					toc.push('<li><a href="#/' + i + '">' + $(this).attr('title') + '</a></li>');
+					// Append table of contents
+					$('#table-of-contents').append( toc.join('') );
+				}
+			});
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+
+				/* Option generator: http://codepen.io/anon/pen/FuvJA */
+				controls: true,
+				progress: true,
+				history: true,
+				keyboard: true,
+				overview: true,
+				center: true,
+				loop: false,
+				rtl: false,
+				mousewheel: false,
+				rollingLinks: true,
+				autoSlide: 0,
+				transition: Reveal.getQueryHash().transition || 'concave',
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'http://frc.github.com/brand/reveal/js/libs/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'http://frc.github.com/brand/reveal/js/plugins/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'http://frc.github.com/brand/reveal/js/plugins/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'http://frc.github.com/brand/reveal/js/plugins/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'http://frc.github.com/brand/reveal/js/plugins/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'http://frc.github.com/brand/reveal/js/plugins/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: '//frc.github.com/reveal/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			// Fires each time a new slide is activated
+			});
+
+			// Add pagination
+			Reveal.addEventListener( 'slidechanged', function( event ) {
+				// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+				if ( event.indexh == 0 ) {
+					$("#slide-number").html('<strong>Intro</strong>');
+				} else {
+					var subpage = event.indexv > 0 ? '/<strong>' + event.indexv + '</strong>' : '';
+					$("#slide-number").html('<strong>' + event.indexh + '</strong>' + subpage);
+				}
+			});
+
+		</script>
+
+	</body>
+</html>
