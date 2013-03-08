@@ -183,6 +183,12 @@ body {
 .logo.inverted {
   background-image: url("http://frc.github.com/brand/assets/images/frantic_logo_black.png"); }
 
+.heading--fancy {
+	letter-spacing: -15px;
+	text-shadow: 5px 0px 10px rgba(0,0,0,0.2);
+	text-transform: uppercase;
+}
+
 /*    Control panel   */
 #panel {
   background: linear-gradient(rgba(0, 0, 0, 0.8), transparent);
