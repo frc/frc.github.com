@@ -184,12 +184,12 @@ body {
   background-image: url("http://frc.github.com/brand/assets/images/frantic_logo_black.png"); }
 
 
-.reveal h1 .heading--fancy,
-.reveal h2 .heading--fancy,
-.reveal h3 .heading--fancy,
-.reveal h4 .heading--fancy,
-.reveal h5 .heading--fancy,
-.reveal h6 .heading--fancy {
+.reveal h1.heading--fancy,
+.reveal h2.heading--fancy,
+.reveal h3.heading--fancy,
+.reveal h4.heading--fancy,
+.reveal h5.heading--fancy,
+.reveal h6.heading--fancy {
 	letter-spacing: -15px;
 	text-shadow: 5px 0px 10px rgba(0,0,0,0.2);
 	text-transform: uppercase;
